@@ -6,6 +6,10 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.18.2'
       - name: Check out code
         uses: actions/checkout@v2
       - name: Make envfile
@@ -19,9 +23,5 @@ jobs:
           envkey_DB_HOST: localhost
           directory: server
           file_name: .env
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18.18.2'
       - name: Run e2e tests
         run: npm run e2e-tests
