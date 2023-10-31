@@ -10,7 +10,6 @@ WORKDIR /app
 COPY package.json ./
 COPY /pnpm-lock.yaml ./
 
-RUN npm install -g npm@10.2.1
 RUN npm i -g pnpm
 RUN pnpm i
 

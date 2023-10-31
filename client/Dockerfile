@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY .npmrc .npmrc
 
-RUN npm install -g npm@10.2.1
+
 RUN npm i -g pnpm
 RUN pnpm i
 
