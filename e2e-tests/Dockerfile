@@ -4,16 +4,11 @@ RUN mkdir /server
 WORKDIR /server
 
 COPY ./server/package.json ./package.json
-COPY ./server/pnpm-lock.yaml ./pnpm-lock.yaml
 
-RUN npm install -g npm@10.2.1
-RUN npm i -g pnpm
-RUN pnpm i
 
 COPY ./server/src ./
 COPY ./server/.env ./
 COPY ./server/.eslintrc.js ./
-COPY ./server/.npmrc ./
 COPY ./server/tsconfig.json ./
 
 RUN mkdir /e2e-tests
