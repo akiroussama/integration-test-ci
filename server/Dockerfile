@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:18.6.0-alpine3.16
 
 RUN apk --no-cache add curl
 RUN apk add make g++ python3 git
@@ -9,7 +9,8 @@ WORKDIR /app
 
 COPY package.json ./
 COPY /pnpm-lock.yaml ./
-RUN npm i -g pnpm
+
+RUN npm i -g pnpm@6.23.6
 RUN pnpm i
 
 COPY src src

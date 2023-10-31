@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:18.6.0-alpine3.16
 
 RUN apk --no-cache add curl
 
@@ -7,7 +7,8 @@ WORKDIR /app
 COPY package*.json ./
 COPY .npmrc .npmrc
 
-RUN npm i -g pnpm
+
+RUN npm i -g pnpm@6.23.6
 RUN pnpm i
 
 COPY postcss.config.js postcss.config.js 

@@ -17,6 +17,10 @@
     "url": "https://github.com/ComicScrip/wns-livecodings/issues"
   },
   "homepage": "https://github.com/ComicScrip/wns-livecodings#readme",
+  "engines": {
+    "node":"^18.17.0 || >=20.5.0",
+    "npm": "^10.2.1 || >=10.2.0"
+  },
   "dependencies": {
     "@types/cookie-parser": "^1.4.3",
     "@types/cors": "^2.8.12",
