@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:18.6.0-alpine3.16
 
 RUN apk --no-cache add curl
 
