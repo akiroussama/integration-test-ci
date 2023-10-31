@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package.json ./
 COPY /pnpm-lock.yaml ./
 
-RUN npm i -g pnpm
+RUN npm i -g pnpm@6.23.6
 RUN pnpm i
 
 COPY src src
