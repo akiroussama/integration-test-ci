@@ -25,7 +25,8 @@ jobs:
           file_name: .env
       - name: Run e2e tests
         run: npm run e2e-tests
-      - uses: actions/upload-artifact@v3
+      - name: Upload report
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: playwright-report
