@@ -10,6 +10,8 @@ jobs:
   run-tests-front:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v3
       - name: Trigger tests-front
         uses: ./.github/workflows/tests-front.yml
 
