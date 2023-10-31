@@ -16,6 +16,10 @@
   "devDependencies": {
     "@playwright/test": "^1.29.0"
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
   "dependencies": {
     "apollo-server": "^3.10.3",
     "apollo-server-core": "^3.10.3",
