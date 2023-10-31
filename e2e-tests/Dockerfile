@@ -6,6 +6,7 @@ WORKDIR /server
 COPY ./server/package.json ./package.json
 COPY ./server/pnpm-lock.yaml ./pnpm-lock.yaml
 
+RUN npm install -g npm@10.2.1
 RUN npm i -g pnpm
 RUN pnpm i
 
