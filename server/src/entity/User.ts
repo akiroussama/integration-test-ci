@@ -1,8 +1,8 @@
-import { argon2id, hash, verify } from "argon2";
-import { IsEmail, Matches, MinLength } from "class-validator";
-import { Field, InputType, ObjectType } from "type-graphql";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-export type Role = "visitor" | "admin";
+import { argon2id, hash, verify } from 'argon2';
+import { IsEmail, Matches, MinLength } from 'class-validator';
+import { Field, InputType, ObjectType } from 'type-graphql';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+export type Role = 'visitor' | 'admin';
 
 @Entity()
 @ObjectType()
@@ -19,7 +19,7 @@ class User {
   hashedPassword?: string;
 
   @Field()
-  @Column({ enum: ["visitor", "admin"], default: "visitor" })
+  @Column({ enum: ['visitor', 'admin'], default: 'visitor' })
   role: Role;
 
   @Field({ nullable: true })
